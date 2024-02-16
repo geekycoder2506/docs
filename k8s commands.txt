@@ -1,0 +1,56 @@
+ To Create Pod named as pod1 with image httpd
+ 38  kubectl run pod1 --image=httpd
+ 39 kubectl get pods -o wide
+  --------------------------------------- 
+   
+   40  kubectl expose pod/pod1 --name=pod1 --type=NodePort --port=80
+   41  kubectl get service
+   42  cat /etc/os-release
+   43  clear
+   44  kubectl create deployment/app1 --image=kharatramesh/vadapavimages:biryani
+   45  kubectl create deployment app1 --image=kharatramesh/vadapavimages:biryani
+   46  kubectl expose deployment/app1 --type=NodePort --port=80
+   
+   47  kubectl get service
+-----------------------------------------------
+
+
+ 3 kubectl get nodes
+   4 kubectl create deployment app1 --image=httpd
+   5 kubectl expose deployment/app1 --name=s1 --type=LoadBalancer --port=80
+   6 kubectl get service
+   7 kubectl get service
+   8 kubectl create deployment app2 --image=httpd
+   9 kubectl expose deployment/app2 --name=s2 --type=LoadBalancer --port=80
+  10 kubectl expose deployment/app2 --name=s2 --type=LoadBalancer --external-ip=2.2.2.2  --port=80
+  11 kubectl expose deployment/app2 --name=s3 --type=LoadBalancer --external-ip=2.2.2.2  --port=80
+  12 kubectl get service
+  
+  -------------------
+    537  kubectl create deployment app1 --image=httpd -n google
+  538  kubectl get deployment -n google
+  539  kubectl get rs -n google
+  540  kubectl get pods -n google
+  541  kubectl scale deployment/app1 --replicas=3 -n google
+  542  kubectl get pods -n google
+  543  kubectl get rs -n google
+  544  kubectl get pods -n google
+  545  kubectl delete pod app1-6d574fc79b-ktb7p -n google
+  546  history
+  547  clear
+  548  kubectl get deployment -n google
+  549  kubectl expose deployment/app1 --type=LoadBalancer --port=80 -n google
+  550  kubectl get service -n google
+  551  kubectl edit deployment/app1 -n google
+  552  kubectl get pods -n google
+  553  kubectl get pods -n google
+  554  kubectl get pods -n google
+  555  kubectl get rs -n google
+  556  kubectl edit deployment/app1 -n google
+  557  kubectl get rs -n google
+  558  kubectl get rs -n google
+  559  kubectl get rs -n google
+  560  kubectl get rs -n google
+  561  kubectl get pods -n google
+  562  kubectl get rs -n google
+  563  history
